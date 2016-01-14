@@ -1,0 +1,20 @@
+{
+	"name": "configulor",
+	"description": "basic config",
+	"main": "",
+	"dependencies": {
+		"bootstrap": "3.3.6",
+		"animate.css": "3.5.1"
+	},
+	"license": "ISC",
+	"moduleType": [],
+	"homepage": "",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}
