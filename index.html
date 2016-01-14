@@ -1,17 +1,11 @@
-<html>
+<html ng-app >
 
 	<head>
-		<title>Angular 2 QuickStart</title>
+		<title>Angular 1 Starter</title>
 
 		<!-- 1. Load libraries -->
-		<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-		<script src="node_modules/rxjs/bundles/Rx.umd.js"></script>
-		<script src="node_modules/angular2/bundles/angular2-all.umd.js"></script>
-
-		<!-- 2. Load our 'modules' -->
-		<script src='app/app.component.js'></script>
-		<script src='app/boot.js'></script>
-
+		
+		<script src="node_modules/angular/angular.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 
@@ -19,7 +13,12 @@
 
 	<!-- 3. Display the application -->
 	<body>
-		<my-app>Loading...</my-app>
+		<div>
+			<label>Name:</label>
+			<input type="text" ng-model="yourName" placeholder="Enter a name here">
+			<hr>
+			<h1>Hello {{yourName}}!</h1>
+		</div>
 	</body>
 
 </html>
