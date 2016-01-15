@@ -1,24 +1,33 @@
-<html ng-app >
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-example7-production</title>
+  
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <script src="/node_modules/angular/angular.min.js"></script>
+  <script src="/node_modules/angular-route/angular-route.min.js"></script>
+  <script src="/app/app.js"></script>
+  
 
-	<head>
-		<title>Angular 1 Starter</title>
+  
+</head>
+<body ng-app="moviedb">
+	
+ 
+<div  class="container">
+ 	<h1>Movies</h1>
+</div> 
 
-		<!-- 1. Load libraries -->
+<div ng-controller="moviesController" class="container">
+ 	
+
+	<div class="movie" ng-repeat="movie in movies ">
 		
-		<script src="node_modules/angular/angular.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 
-	</head>
 
-	<!-- 3. Display the application -->
-	<body>
-		<div>
-			<label>Name:</label>
-			<input type="text" ng-model="yourName" placeholder="Enter a name here">
-			<hr>
-			<h1>Hello {{yourName}}!</h1>
-		</div>
-	</body>
-
+	</div>
+</div>
+</body>
 </html>

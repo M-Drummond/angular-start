@@ -9,7 +9,8 @@
   "author": "",
   "license": "unlicense",
   "dependencies": {
-    "angular": "1.4.8",
+    "angular": "1.5.0-rc.0",
+    "angular-route": "1.4.x",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
     "reflect-metadata": "0.1.2",
