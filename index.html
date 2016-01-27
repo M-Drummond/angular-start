@@ -1,33 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Example - example-example7-production</title>
-  
-  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-  <script src="/node_modules/angular/angular.min.js"></script>
-  <script src="/node_modules/angular-route/angular-route.min.js"></script>
-  <script src="/app/app.js"></script>
-  
-
-  
-</head>
-<body ng-app="moviedb">
+	<meta charset="UTF-8">
+	<title>Example - example-example7-production</title>
 	
- 
-<div  class="container">
- 	<h1>Movies</h1>
-</div> 
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+	<script src="/node_modules/angular/angular.min.js"></script>
+	<script src="/node_modules/angular-route/angular-route.min.js"></script>
+	<script src="/app/app.js"></script>
+	
+</head>
+<body ng-app="myApp" >
+	<div class="container"><h1>Academy Awards List</h1>
+    
+<div id="" class="container table-resonsive"  ng-controller="movieController" >
 
-<div ng-controller="moviesController" class="container">
- 	
+	<table   id="movieList" class=" table table-hover " >
+		<tr><thead><td>Year</td><td>Title</td></thead></tr>
+			<tr ng-repeat="movie in movies " class="movieItem">
+				<td>
+						<span class="date small">{{movie.releaseYear}}</span>
+				</td>
+				<td>
+ 					 <span class="">{{movie.title}}</span>
+				</td>
+				<td>
+					<a href="http://www.imdb.com/title/{{movie.imdbId}}">IMDB</a>
+				</td>
+			</tr>
 
-	<div class="movie" ng-repeat="movie in movies ">
-		
+	</table>
 
-
-	</div>
 </div>
-</body>
+
 </html>

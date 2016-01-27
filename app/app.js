@@ -1,34 +1,44 @@
-(function(angular) {
-  'use strict';
-var myApp = angular.module('moviedb', []);
-
-myApp.controller('moviesController', ['$scope', '$http' , function($scope, $http ) {
-	var movies = this ;
+var app = angular.module('myApp', []);
+app.controller('movieController', function($scope, $http ) {
  
-	var source = 'http://www.omdbapi.com/?t=space&y=&plot=short&r=json' ;
-	
-	var list = ' ' ;
+ $http.get('awards.json').success(function(data) {
+ 	console.log('awards get') ;
+ 	movieList.movies = [] ;
+ 	$scope.movies = [] ;
+ 	movieList.movies = data ;
+ 	$scope.movies = movieList.movies; 
 
-	console.log(source) ;
 
-	$http.get(source).success(function(data){ 
-			
-		// movies = data ;
 
-		console.log(data);
+ 	console.log(movieList.movies); 
+   
+	 });
 
-		// processMovies(data, movies);
 
-		movies.list = data ;
 
-		console.log(movies.list);
 
-		$scope.movies = data; 
 
-	});
+});
 
-}]);
-})(window.angular);
+
+
+// (function(angular) {
+//   'use strict';
+// var myApp = angular.module('moviedb', ['ngRoute']);
+
+// myApp.controller('moviesController', ['$scope', '$http' , function($scope, $http ) {
+
+// 	var movies = [] ;
+// 	var moviesList = this;
+//     $scope.movies = [
+// 			{"Title": "2001, A Space Odyessy", "Director": "Stanley Kubrick"} ,
+// 			{"Title": "The Matrix", "Director": "The Wachowskis" } 
+// 		];
+ 	
+ 
+
+// }]);
+// })(window.angular);
 
  
 // function processMovies(data, movies ) {
@@ -38,3 +48,6 @@ myApp.controller('moviesController', ['$scope', '$http' , function($scope, $http
 
 //  	console.log(movies.movielist.Title);
 // };
+/////////////
+// json path 
+// var source = 'http://www.omdbapi.com/?t=space&y=&plot=short&r=json' ;
